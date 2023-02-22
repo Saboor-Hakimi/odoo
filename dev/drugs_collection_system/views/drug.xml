@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+    <record id="view_drug_collection_form" model="ir.ui.view">
+        <field name="name">drugs_collection_form</field>
+        <field name="model">collected.drug</field>
+        <field name="arch" type="xml">
+            <form>
+               <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="drug_price"/>
+                        <field name="drug_quantity"/>
+                        <field name="drug_type"/>
+                    </group>
+               </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_drug_collection_tree" model="ir.ui.view">
+        <field name="name">drugs_collection_tree</field>
+        <field name="model">collected.drug</field>
+        <field name="arch" type="xml">
+            <tree>    
+                <field name="name"/>
+                <field name="description"/>
+                <field name="drug_price"/>
+                <field name="drug_quantity"/>
+                <field name="drug_type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_drug_collection" model="ir.actions.act_window">
+        <field name="name">Drugs Collection</field>
+        <field name="res_model">collected.drug</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_drug_collection" name="Drugs" sequence="1" action="action_drug_collection">
+    </menuitem>
+
+
+</odoo>

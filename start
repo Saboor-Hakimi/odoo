@@ -1,0 +1,1 @@
+cd /home/saboor/odoo/src/odoo && pm2 start --name "odoo_dev" "python3 odoo-bin -r saboor -d saboor --addons-path dev/ -u 'drugs_collection_system'"
